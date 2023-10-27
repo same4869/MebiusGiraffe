@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="giraffe_refresh_tips">功能不完善？找开发，但不一定做</string>
+    <string name="giraffe_dialog_tips">开启悬浮窗权限后可以自动打开 giraffe，是否要打开?</string>
+    <string name="giraffe_dialog_tips_yes">现在去开启</string>
+    <string name="giraffe_dialog_tips_no">暂不开启</string>
+    <string name="giraffe_feat_exception">异常捕获</string>
+    <string name="giraffe_feat_net">网络监控</string>
+    <string name="giraffe_exception_toast">发生异常! 日志已保存</string>
+    <string name="giraffe_exception_title">异常详情</string>
+    <string name="giraffe_exception_title2">App异常日志</string>
+    <string name="giraffe_exception_title3">异常日志</string>
+    <string name="giraffe_logfile_exception">log日志文件已损坏!</string>
+    <string name="giraffe_empty_tips">这里空空如也~</string>
+    <string name="giraffe_copy_tips">长按复制 : </string>
+    <string name="giraffe_copy_tips1">已复制到剪贴板</string>
+    <string name="giraffe_log_detail_title">日志详情</string>
+    <string name="giraffe_net_title">网络日志</string>
+    <string name="giraffe_quick_title">快捷功能</string>
+    <string name="giraffe_clear_log">清空成功</string>
+    <string name="giraffe_clear_all_minitor_log">清除所有监控数据</string>
+    <string name="giraffe_about_log">关于giraffe</string>
+    <string name="giraffe_about_logphone">机型信息，点击复制</string>
+    <string name="wolf_app_env">app切换环境</string>
+    <string name="wolf_env_ensure">环境确认(成功将杀死app)</string>
+    <string name="wolf_toast_hisory_title">Toast历史</string>
+</resources>

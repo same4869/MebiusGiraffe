@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="giraffe_black">#333333</color>
+    <color name="giraffe_white">#ffffff</color>
+    <color name="giraffe_material_primary">#4fc3f7</color>
+    <color name="giraffe_divider_line">#e5e5e5</color>
+    <color name="giraffe_error_red">#ff0000</color>
     <color name="giraffe_transparent_black">#88000000</color>
-
+    <color name="giraffe_bg_card">#e3f2fd</color>
 </resources>

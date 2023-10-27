@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRabbitQuickPageRootLl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/giraffe_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mGiraffeQuickPageClearAllDataBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/giraffe_clear_all_minitor_log"
+        android:textColor="@color/giraffe_black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="15dp"
+        android:background="@color/giraffe_divider_line" />
+
+    <TextView
+        android:id="@+id/mGiraffeQuickPageViewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/giraffe_about_log"
+        android:textColor="@color/giraffe_black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="15dp"
+        android:background="@color/giraffe_divider_line" />
+
+</LinearLayout>

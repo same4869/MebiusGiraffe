@@ -6,9 +6,14 @@ import android.content.Context
 import android.view.View
 import com.pokemon.mebius.giraffe.base.GiraffeLog
 import com.pokemon.mebius.giraffe.base.GiraffeProtocol
+import com.pokemon.mebius.giraffe.base.GiraffeSettings
 import com.pokemon.mebius.giraffe.base.common.GiraffeUtils
 import com.pokemon.mebius.giraffe.config.GiraffeConfig
+import com.pokemon.mebius.giraffe.monitor.GiraffeMonitor
+import com.pokemon.mebius.giraffe.storage.GiraffeStorage
 import com.pokemon.mebius.giraffe.ui.GiraffeUi
+import com.pokemon.mebius.giraffe.ui.GiraffeUiKernel
+import com.pokemon.mebius.giraffe.ui.utils.FloatingViewPermissionHelper
 import okhttp3.Interceptor
 
 object Giraffe : GiraffeProtocol {
@@ -38,31 +43,49 @@ object Giraffe : GiraffeProtocol {
     }
 
     override fun saveCrashLog(e: Throwable) {
-        TODO("Not yet implemented")
+        GiraffeMonitor.saveCrash(e, Thread.currentThread())
     }
 
-    override fun getNetInterceptor(): Interceptor {
-        TODO("Not yet implemented")
-    }
+    override fun getNetInterceptor():  Interceptor = GiraffeMonitor.getNetMonitor()
 
     override fun open(requestPermission: Boolean, activity: Activity) {
-        TODO("Not yet implemented")
+        val overlayPermissionIsOpen = FloatingViewPermissionHelper.checkPermission(application)
+
+        if (!requestPermission && !overlayPermissionIsOpen) return
+
+        if (overlayPermissionIsOpen) {
+            GiraffeUiKernel.showFloatingView()
+        } else {
+            FloatingViewPermissionHelper.showConfirmDialog(
+                activity,
+                object : FloatingViewPermissionHelper.OnConfirmResult {
+                    override fun confirmResult(confirm: Boolean) {
+                        if (confirm) {
+                            FloatingViewPermissionHelper.requestFloatingWindowPermission(
+                                application
+                            )
+                        }
+                    }
+                })
+        }
     }
 
     override fun changeAutoOpenStatus(context: Context, autoOpen: Boolean) {
-        TODO("Not yet implemented")
+        GiraffeSettings.autoOpenGiraffe(context, autoOpen)
     }
 
-    override fun isAutoOpen(context: Context): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isAutoOpen(context: Context): Boolean  = GiraffeSettings.autoOpenGiraffe(context)
 
-    override fun getCurrentActivity(): Activity? {
-        TODO("Not yet implemented")
-    }
+    override fun getCurrentActivity() = GiraffeUi.getCurrentActivity()
 
     override fun openPage(pageClass: Class<out View>?, params: Any?) {
-        TODO("Not yet implemented")
+        GiraffeUi.openPage(pageClass, params)
+    }
+
+    private fun initAllComponent() {
+        GiraffeUi.init(application, mConfig.uiConfig)
+        GiraffeStorage.init(application, mConfig.storageConfig)
+        GiraffeMonitor.init(application, mConfig.monitorConfig)
     }
 
     private fun configUi() {

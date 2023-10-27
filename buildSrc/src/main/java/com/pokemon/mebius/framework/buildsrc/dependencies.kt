@@ -6,7 +6,7 @@ object Repos {
 
 object Dependencies {
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.agp}"
-    const val sora_commlib = "com.pokemon.mebius:commlib:0.0.1"
+    const val sora_commlib = "com.github.same4869:MebiusCommlib:0.0.1"
     const val gson = "com.google.code.gson:gson:2.8.7"
     const val green_dao_plugin = "org.greenrobot:greendao-gradle-plugin:3.3.0"
     const val green_dao = "org.greenrobot:greendao:3.3.0"
@@ -55,7 +55,7 @@ object AndroidX {
 
 object Versions {
     const val compileSdkVersion = 30
-    const val minSdkVersion = 23
+    const val minSdkVersion = 24
     const val targetSdkVersion = 30
     const val kotlin = "1.5.30"
     const val agp = "7.0.3"

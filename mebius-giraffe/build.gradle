@@ -61,6 +61,6 @@ dependencies {
 //    api Dependencies.sora_widget
 //    implementation Dependencies.sora_arch
 //    api SoraWidget.brackets
-    implementation 'com.google.android:flexbox:2.0.1'
+//    implementation 'com.google.android:flexbox:2.0.1'
 }
 
