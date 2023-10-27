@@ -1,0 +1,66 @@
+import com.pokemon.mebius.framework.buildsrc.*
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'org.greenrobot.greendao'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdk Versions.compileSdkVersion
+
+    namespace 'com.pokemon.mebius.giraffe'
+
+    defaultConfig {
+        minSdk Versions.minSdkVersion
+        targetSdk Versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+greendao {
+    schemaVersion 1002
+    daoPackage 'com.pokemon.mebius.giraffe.base.greendao'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    implementation Kotlin.std
+    implementation AndroidX.core
+    implementation UIKit.recycler_view
+    implementation Dependencies.rx_java
+    implementation Dependencies.rx_android
+    implementation Dependencies.green_dao
+    implementation UIKit.swipe_refresh_layout
+    implementation Dependencies.okhttp3
+    implementation AndroidX.lifecycle_ext
+    implementation Dependencies.gson
+    implementation AndroidX.appcompat
+    api Dependencies.sora_commlib
+//    api Dependencies.sora_widget
+//    implementation Dependencies.sora_arch
+//    api SoraWidget.brackets
+    implementation 'com.google.android:flexbox:2.0.1'
+}
+

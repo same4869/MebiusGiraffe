@@ -1,0 +1,45 @@
+import com.pokemon.mebius.framework.buildsrc.*
+
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    compileSdk Versions.compileSdkVersion
+
+    namespace 'com.pokemon.mebius.giraffe.demo'
+
+    defaultConfig {
+        applicationId "com.pokemon.mebius.giraffe.demo"
+        minSdk Versions.minSdkVersion
+        targetSdk Versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation AndroidX.core_ktx
+    implementation AndroidX.appcompat
+    implementation UIKit.material
+    implementation UIKit.constraint_layout
+    implementation project(":mebius-giraffe")
+}
