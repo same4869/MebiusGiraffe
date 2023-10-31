@@ -13,25 +13,10 @@ object Dependencies {
     const val rx_java = "io.reactivex.rxjava2:rxjava:2.2.19"
     const val rx_android = "io.reactivex.rxjava2:rxandroid:2.1.1"
     const val okhttp3 = "com.squareup.okhttp3:okhttp:4.8.0"
-//    const val sora_widget = "com.mihoyo.framework.sora:widget:0.0.87"
+    const val mebius_widget_rv = "com.github.same4869:MebiusWidget:0.0.1"
 //    const val sora_arch = "com.mihoyo.framework.sora:arch:0.0.1"
 }
 
-object SoraWidget {
-    const val debug_mode = true
-    const val widget = "com.mihoyo.framework.sora:widget:0.0.89"
-    const val refresh = "com.mihoyo.framework.sora:widget-refresh:1.0.0"
-    const val refresh_old = "com.mihoyo.framework.sora:widget-refresh-old:1.0.0"
-    const val guide = "com.mihoyo.framework.sora:widget-guide:1.0.0"
-    const val lTab = "com.mihoyo.framework.sora:widget-ltab:1.0.0"
-    const val vector = "com.mihoyo.framework.sora:widget-vector:1.0.4"
-    const val brackets = "com.mihoyo.framework.sora:widget-brackets:1.0.5"
-}
-
-object SoraWolf {
-    const val debug_mode = false
-    const val core = ""
-}
 
 object Kotlin {
     const val gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
@@ -55,9 +40,9 @@ object AndroidX {
 
 object Versions {
     const val compileSdkVersion = 30
-    const val minSdkVersion = 24
+    const val minSdkVersion = 23
     const val targetSdkVersion = 30
-    const val kotlin = "1.5.30"
+    const val kotlin = "1.5.21"
     const val agp = "7.0.3"
 }
 

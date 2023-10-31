@@ -5,6 +5,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath Dependencies.androidGradlePlugin
@@ -12,6 +13,7 @@ buildscript {
         classpath Dependencies.green_dao_plugin
     }
 }
+
 tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }

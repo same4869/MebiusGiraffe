@@ -21,7 +21,7 @@
     <string name="giraffe_clear_all_minitor_log">清除所有监控数据</string>
     <string name="giraffe_about_log">关于giraffe</string>
     <string name="giraffe_about_logphone">机型信息，点击复制</string>
-    <string name="wolf_app_env">app切换环境</string>
-    <string name="wolf_env_ensure">环境确认(成功将杀死app)</string>
-    <string name="wolf_toast_hisory_title">Toast历史</string>
+    <string name="giraffe_app_env">app切换环境</string>
+    <string name="giraffe_env_ensure">环境确认(成功将杀死app)</string>
+    <string name="giraffe_toast_history_title">Toast历史</string>
 </resources>

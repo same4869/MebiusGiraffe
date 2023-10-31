@@ -14,10 +14,10 @@ dependencies {
 }
 gradlePlugin {
     plugins {
-        create("SoraWolfBuildPlugin") {
-            id = "wolf.build.plugin"
-            description = "pre build for Sora Wolf project"
-            implementationClass = "com.mihoyo.sora.framework.buildsrc.SoraWolfBuildPlugin"
+        create("GiraffeBuildPlugin") {
+            id = "giraffe.build.plugin"
+            description = "pre build for Giraffe project"
+            implementationClass = "com.pokemon.mebius.framework.buildsrc.GiraffeBuildPlugin"
         }
     }
 }

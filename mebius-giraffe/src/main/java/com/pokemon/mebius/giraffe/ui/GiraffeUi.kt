@@ -5,9 +5,13 @@ import android.view.View
 import com.pokemon.mebius.commlib.utils.APPLICATION
 import com.pokemon.mebius.giraffe.R
 import com.pokemon.mebius.giraffe.base.GiraffeLog
+import com.pokemon.mebius.giraffe.base.ui.GiraffeEntryPage
 import com.pokemon.mebius.giraffe.config.GiraffeMainFeatureInfo
 import com.pokemon.mebius.giraffe.config.GiraffeUiConfig
+import com.pokemon.mebius.giraffe.ui.page.GiraffeExceptionListPage
+import com.pokemon.mebius.giraffe.ui.page.GiraffeHttpLogListPage
 import com.pokemon.mebius.giraffe.ui.page.GiraffeQuickFunctionPage
+import com.pokemon.mebius.giraffe.ui.page.GiraffeToastHistoryPage
 
 object GiraffeUi {
     var mConfig: GiraffeUiConfig = GiraffeUiConfig()
@@ -41,7 +45,7 @@ object GiraffeUi {
             )
             add(
                 GiraffeMainFeatureInfo(
-                    APPLICATION.resources.getString(R.string.giraffe_toast_hisory_title),
+                    APPLICATION.resources.getString(R.string.giraffe_toast_history_title),
                     R.drawable.ic_twotone_announcement_24,
                     GiraffeToastHistoryPage::class.java
                 )

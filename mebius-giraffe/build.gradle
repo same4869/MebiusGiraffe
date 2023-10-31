@@ -3,9 +3,11 @@ import com.pokemon.mebius.framework.buildsrc.*
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'org.greenrobot.greendao'
+//    id 'org.greenrobot.greendao'
     id 'kotlin-android-extensions'
 }
+
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdk Versions.compileSdkVersion
@@ -17,7 +19,6 @@ android {
         targetSdk Versions.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -28,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding true
@@ -58,6 +59,7 @@ dependencies {
     implementation Dependencies.gson
     implementation AndroidX.appcompat
     api Dependencies.sora_commlib
+    implementation Dependencies.mebius_widget_rv
 //    api Dependencies.sora_widget
 //    implementation Dependencies.sora_arch
 //    api SoraWidget.brackets

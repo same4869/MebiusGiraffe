@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:parentTag="RelativeLayout">
+
+    <TextView
+        android:id="@+id/mLogDetailPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        tools:text="set-cookie [ltoken=zIJlo9G21czd3q0vCoKHDJ3Q26mSlDuUaF7OWZ2s; Path=/; Domain=mihoyo.com; Max-Age=31536000; SameSite=None; Secure, ltuid=26006; Path=/; Domain=mihoyo.com; Max-Age=31536000; SameSite=None; Secure]"
+        android:padding="10dp"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/mLogPreViewIvResponseContentType"
+        android:background="@color/giraffe_divider_line" />
+
+</merge>
