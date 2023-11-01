@@ -27,7 +27,7 @@ class GiraffeQuickFunctionPage(context: Context) : GiraffeBasePage(context) {
             showToast(resources.getString(R.string.giraffe_clear_log))
         }
 
-        mGiraffeQuickPageViewAbout.text = resources.getString(R.string.giraffe_about_log) +"(version: ${BuildConfig.VERSION_CODE})"
+        mGiraffeQuickPageViewAbout.text = resources.getString(R.string.giraffe_about_log) +"(version: 0.0.1)" //${BuildConfig.VERSION_CODE})"
         mGiraffeQuickPageViewAbout.onClick {
             showToast("emmmm.....")
         }

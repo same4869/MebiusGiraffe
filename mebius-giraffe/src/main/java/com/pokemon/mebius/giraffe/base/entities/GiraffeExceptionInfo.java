@@ -16,9 +16,9 @@ public class GiraffeExceptionInfo implements GiraffeInfoProtocol{
     public Long time;
     public String pageName;
 
-    @Generated(hash = 1331286383)
-    public GiraffeExceptionInfo(Long id, String crashTraceStr, String simpleMessage,
-                                String threadName, String exceptionName, Long time, String pageName) {
+    @Generated(hash = 1830249241)
+    public GiraffeExceptionInfo(Long id, String crashTraceStr, String simpleMessage, String threadName,
+            String exceptionName, Long time, String pageName) {
         this.id = id;
         this.crashTraceStr = crashTraceStr;
         this.simpleMessage = simpleMessage;
@@ -28,7 +28,7 @@ public class GiraffeExceptionInfo implements GiraffeInfoProtocol{
         this.pageName = pageName;
     }
 
-    @Generated(hash = 1335590455)
+    @Generated(hash = 222474797)
     public GiraffeExceptionInfo() {
     }
 

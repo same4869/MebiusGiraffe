@@ -78,13 +78,12 @@ public class GiraffeHttpLogInfo implements GiraffeInfoProtocol {
      */
     public String responseHeaders;
 
-    @Generated(hash = 453502905)
-    public GiraffeHttpLogInfo(Long id, String host, String curlBean, String path,
-                              String requestBody, String responseStr, String size, String requestType,
-                              String responseContentType, String responseCode,
-                              String requestParamsMapString, Long time, Long tookTime,
-                              boolean isSuccessRequest, boolean isExceptionRequest,
-                              String requestHeaders, String responseHeaders) {
+    @Generated(hash = 2008486608)
+    public GiraffeHttpLogInfo(Long id, String host, String curlBean, String path, String requestBody,
+            String responseStr, String size, String requestType, String responseContentType,
+            String responseCode, String requestParamsMapString, Long time, Long tookTime,
+            boolean isSuccessRequest, boolean isExceptionRequest, String requestHeaders,
+            String responseHeaders) {
         this.id = id;
         this.host = host;
         this.curlBean = curlBean;
@@ -104,7 +103,7 @@ public class GiraffeHttpLogInfo implements GiraffeInfoProtocol {
         this.responseHeaders = responseHeaders;
     }
 
-    @Generated(hash = 270070941)
+    @Generated(hash = 703449469)
     public GiraffeHttpLogInfo() {
     }
 

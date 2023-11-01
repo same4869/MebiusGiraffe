@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mihoyo.sora.commlib.utils.SoraCommUtilKt;
+import com.pokemon.mebius.commlib.utils.MebiusCommUtilKt;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,7 +36,7 @@ public class JsonViewerAdapter extends BaseJsonViewerAdapter<JsonViewerAdapter.J
             mJSONArray = (JSONArray) object;
             rawText = null;
         } else {
-            SoraCommUtilKt.showToast("Json 异常，无法查看具体信息", true, false);
+            MebiusCommUtilKt.showToast("Json 异常，无法查看具体信息", true, false);
             mJSONObject = null;
             mJSONArray = null;
             rawText = jsonStr;

@@ -1,5 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-import com.pokemon.mebius.framework.buildsrc.*
+//// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
     repositories {
@@ -8,9 +7,9 @@ buildscript {
         maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath Dependencies.androidGradlePlugin
-        classpath Kotlin.gradle_plugin
-        classpath Dependencies.green_dao_plugin
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20"
+        classpath "org.greenrobot:greendao-gradle-plugin:3.3.0"
     }
 }
 

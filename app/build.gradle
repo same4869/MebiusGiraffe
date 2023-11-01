@@ -1,19 +1,17 @@
-import com.pokemon.mebius.framework.buildsrc.*
-
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
 
 android {
-    compileSdk Versions.compileSdkVersion
+    compileSdk 33
 
     namespace 'com.pokemon.mebius.giraffe.demo'
 
     defaultConfig {
         applicationId "com.pokemon.mebius.giraffe.demo"
-        minSdk Versions.minSdkVersion
-        targetSdk Versions.targetSdkVersion
+        minSdk 21
+        targetSdk 33
         versionCode 1
         versionName "1.0"
     }
@@ -25,11 +23,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '17'
+        jvmTarget = '1.8'
     }
     buildFeatures {
         viewBinding true
@@ -37,9 +35,10 @@ android {
 }
 
 dependencies {
-    implementation AndroidX.core_ktx
-    implementation AndroidX.appcompat
-    implementation UIKit.material
-    implementation UIKit.constraint_layout
+    implementation "androidx.core:core:1.5.0"
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation "com.google.android.material:material:1.4.0"
     implementation project(":mebius-giraffe")
+    implementation 'com.github.same4869:MebiusRestful:0.0.2'
+    implementation "com.google.code.gson:gson:2.8.7"
 }

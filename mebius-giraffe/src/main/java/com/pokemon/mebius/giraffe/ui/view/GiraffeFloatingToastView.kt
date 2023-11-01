@@ -230,7 +230,7 @@ class GiraffeFloatingToastView(context: Context) : FrameLayout(context),
             canvas.drawRoundRect(boundsF, radius, radius, paint)
         }
 
-        override fun onBoundsChange(bounds: Rect?) {
+        override fun onBoundsChange(bounds: Rect) {
             super.onBoundsChange(bounds)
             bounds ?: return
             boundsF.set(bounds)

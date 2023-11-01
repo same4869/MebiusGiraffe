@@ -6,6 +6,8 @@ import com.pokemon.mebius.giraffe.base.TAG_STORAGE
 import com.pokemon.mebius.giraffe.base.entities.GiraffeExceptionInfo
 import com.pokemon.mebius.giraffe.base.entities.GiraffeHttpLogInfo
 import com.pokemon.mebius.giraffe.base.entities.GiraffeInfoProtocol
+import com.pokemon.mebius.giraffe.base.greendao.DaoMaster
+import com.pokemon.mebius.giraffe.base.greendao.DaoSession
 import com.pokemon.mebius.giraffe.config.GiraffeDaoProviderConfig
 import org.greenrobot.greendao.AbstractDao
 import org.greenrobot.greendao.Property
@@ -179,13 +181,13 @@ internal class GiraffeGreenDaoDbManager(
             add(
                 GiraffeDaoProviderConfig(
                     GiraffeHttpLogInfo::class.java as Class<Any>,
-                    daoSession.wolfHttpLogInfoDao as AbstractDao<Any, Long>
+                    daoSession.giraffeHttpLogInfoDao as AbstractDao<Any, Long>
                 )
             )
             add(
                 GiraffeDaoProviderConfig(
                     GiraffeExceptionInfo::class.java as Class<Any>,
-                    daoSession.wolfExceptionInfoDao as AbstractDao<Any, Long>
+                    daoSession.giraffeExceptionInfoDao as AbstractDao<Any, Long>
                 )
             )
         }
